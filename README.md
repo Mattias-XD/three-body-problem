@@ -1,5 +1,9 @@
 # Three-body problem
 
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Mattias-XD/three-body-problem/blob/main/code/rk4_mpmath_base_V1.5_Colab.ipynb)
+
+**[Try the RK4 integrator in Google Colab](https://colab.research.google.com/github/Mattias-XD/three-body-problem/blob/main/code/rk4_mpmath_base_V1.5_Colab.ipynb).** This is the Colab version of `rk4_mpmath_base_V1.5.py`, including interactive trajectory animations and the three-body triangle display. Run it in your browser, adjust the hyperparameters, and explore the animation controls. The commented-out `MANUAL_IC` block lets you enter the first body's initial position (`x`, `y`) and the reference period (`T`); the other two bodies start at `(-0.5, 0)` and `(0.5, 0)`, and all initial velocities are zero.
+
 This project builds on the article **Three-body periodic collisionless equal-mass free-fall orbits revisited** by Ivan Hristov, Radoslava Hristova, Veljko Dmitrašinović and Kiyotaka Tanikawa, published in *Celestial Mechanics and Dynamical Astronomy* 136, 7 (2024).
 
 - [Published article](https://doi.org/10.1007/s10569-023-10177-w)
