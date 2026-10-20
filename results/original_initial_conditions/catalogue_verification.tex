@@ -1,0 +1,49 @@
+% Required in the preamble: \usepackage{booktabs,graphicx,pdflscape}
+\begin{landscape}
+\begin{table}[p]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\caption{Verification of 31 randomly selected catalogue initial conditions. Classification uses all four return errors. State errors are rounded to three significant figures. Elapsed wall-clock time is cumulative across resumed segments, excluding paused time, and is truncated to whole minutes.}
+\label{tab:catalogue-verification}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{rrrrrlrrrl}
+\toprule
+Sol80 row & atol & rtol & dps & Periods & Classification & Threshold & Steps & State error & Time \\
+\midrule
+1332 & $1.00\times 10^{-24}$ & $1.00\times 10^{-24}$ & 50 & 1 & Periodic & 0.01 & 19\,098\,951 & $1.93\times 10^{-9}$ & 15 h 43 min \\
+1422 & $1.00\times 10^{-24}$ & $1.00\times 10^{-24}$ & 50 & 1 & Periodic & 0.01 & 18\,702\,252 & $1.17\times 10^{-13}$ & 15 h 22 min \\
+1807 & $1.00\times 10^{-24}$ & $1.00\times 10^{-24}$ & 50 & 1 & Periodic & 0.01 & 12\,625\,356 & $2.06\times 10^{-7}$ & 10 h 21 min \\
+2326 & $1.00\times 10^{-24}$ & $1.00\times 10^{-24}$ & 50 & 1 & Periodic & 0.01 & 8\,310\,251 & $1.13\times 10^{-12}$ & 6 h 52 min \\
+2969 & $1.00\times 10^{-24}$ & $1.00\times 10^{-24}$ & 50 & 1 & Periodic & 0.01 & 11\,527\,587 & $5.03\times 10^{-12}$ & 9 h 28 min \\
+3147 & $1.00\times 10^{-24}$ & $1.00\times 10^{-24}$ & 50 & 1 & Periodic & 0.01 & 22\,887\,300 & $1.23\times 10^{-4}$ & 18 h 51 min \\
+4509 & $1.00\times 10^{-24}$ & $1.00\times 10^{-24}$ & 50 & 1 & Periodic & 0.01 & 15\,384\,601 & $1.03\times 10^{-12}$ & 12 h 40 min \\
+4594 & $1.00\times 10^{-24}$ & $1.00\times 10^{-24}$ & 50 & 1 & Periodic & 0.01 & 24\,555\,081 & $7.09\times 10^{-5}$ & 20 h 11 min \\
+4641 & $1.00\times 10^{-24}$ & $1.00\times 10^{-24}$ & 50 & 1 & Periodic & 0.01 & 10\,785\,027 & $6.05\times 10^{-11}$ & 8 h 51 min \\
+5297 & $1.00\times 10^{-24}$ & $1.00\times 10^{-24}$ & 50 & 1 & Periodic & 0.01 & 11\,741\,137 & $3.11\times 10^{-8}$ & 9 h 40 min \\
+5553 & $1.00\times 10^{-24}$ & $1.00\times 10^{-24}$ & 50 & 1 & Periodic & 0.01 & 11\,343\,395 & $5.86\times 10^{-9}$ & 9 h 22 min \\
+8697 & $1.00\times 10^{-24}$ & $1.00\times 10^{-24}$ & 50 & 1 & Periodic & 0.01 & 19\,171\,293 & $2.37\times 10^{-11}$ & 15 h 42 min \\
+8859 & $1.00\times 10^{-24}$ & $1.00\times 10^{-24}$ & 50 & 1 & Periodic & 0.01 & 18\,542\,517 & $1.87\times 10^{-11}$ & 15 h 16 min \\
+9153 & $1.00\times 10^{-24}$ & $1.00\times 10^{-24}$ & 50 & 1 & Periodic & 0.01 & 13\,048\,074 & $7.00\times 10^{-7}$ & 10 h 43 min \\
+9267 & $1.00\times 10^{-24}$ & $1.00\times 10^{-24}$ & 50 & 1 & Periodic & 0.01 & 11\,980\,610 & $1.19\times 10^{-11}$ & 9 h 49 min \\
+9645 & $1.00\times 10^{-24}$ & $1.00\times 10^{-24}$ & 50 & 1 & Periodic & 0.01 & 9\,642\,567 & $3.84\times 10^{-9}$ & 7 h 55 min \\
+10199 & $1.00\times 10^{-24}$ & $1.00\times 10^{-24}$ & 50 & 1 & Periodic & 0.01 & 26\,874\,192 & $8.40\times 10^{-12}$ & 22 h 06 min \\
+10528 & $1.00\times 10^{-24}$ & $1.00\times 10^{-24}$ & 50 & 1 & Periodic & 0.01 & 28\,251\,500 & $2.13\times 10^{-7}$ & 23 h 12 min \\
+10937 & $1.00\times 10^{-24}$ & $1.00\times 10^{-24}$ & 50 & 1 & Periodic & 0.01 & 10\,709\,277 & $5.54\times 10^{-11}$ & 8 h 47 min \\
+12762 & $1.00\times 10^{-24}$ & $1.00\times 10^{-24}$ & 50 & 1 & Periodic & 0.01 & 15\,310\,329 & $2.98\times 10^{-9}$ & 12 h 37 min \\
+13966 & $1.00\times 10^{-24}$ & $1.00\times 10^{-24}$ & 50 & 1 & Periodic & 0.01 & 13\,567\,225 & $7.22\times 10^{-8}$ & 11 h 11 min \\
+14002 & $1.00\times 10^{-24}$ & $1.00\times 10^{-24}$ & 50 & 1 & Periodic & 0.01 & 16\,251\,088 & $3.94\times 10^{-8}$ & 13 h 23 min \\
+14709 & $1.00\times 10^{-24}$ & $1.00\times 10^{-24}$ & 50 & 1 & Periodic & 0.01 & 10\,370\,179 & $1.76\times 10^{-14}$ & 8 h 30 min \\
+15175 & $1.00\times 10^{-24}$ & $1.00\times 10^{-24}$ & 50 & 1 & Periodic & 0.01 & 25\,969\,936 & $5.22\times 10^{-6}$ & 21 h 27 min \\
+17661 & $1.00\times 10^{-24}$ & $1.00\times 10^{-24}$ & 50 & 1 & Periodic & 0.01 & 17\,702\,232 & $1.17\times 10^{-7}$ & 14 h 33 min \\
+17828 & $1.00\times 10^{-24}$ & $1.00\times 10^{-24}$ & 50 & 1 & Periodic & 0.01 & 23\,372\,764 & $1.25\times 10^{-6}$ & 19 h 16 min \\
+18411 & $1.00\times 10^{-24}$ & $1.00\times 10^{-24}$ & 50 & 1 & Periodic & 0.01 & 18\,704\,823 & $2.64\times 10^{-14}$ & 15 h 24 min \\
+19041 & $1.00\times 10^{-24}$ & $1.00\times 10^{-24}$ & 50 & 1 & Periodic & 0.01 & 18\,732\,631 & $5.78\times 10^{-10}$ & 15 h 24 min \\
+19909 & $1.00\times 10^{-24}$ & $1.00\times 10^{-24}$ & 50 & 1 & Periodic & 0.01 & 9\,784\,625 & $3.71\times 10^{-9}$ & 8 h 04 min \\
+22983 & $1.00\times 10^{-24}$ & $1.00\times 10^{-24}$ & 50 & 1 & Periodic & 0.01 & 26\,926\,091 & $2.81\times 10^{-9}$ & 22 h 13 min \\
+23191 & $1.00\times 10^{-24}$ & $1.00\times 10^{-24}$ & 50 & 1 & Periodic & 0.01 & 13\,721\,199 & $2.14\times 10^{-10}$ & 11 h 18 min \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+\end{landscape}
