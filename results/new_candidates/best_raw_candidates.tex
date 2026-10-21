@@ -1,22 +1,49 @@
-% Required in the preamble: \usepackage{booktabs}
-\begin{table}[htbp]
-\centering
-\caption{The ten best raw candidates, ranked by state error at the originally proposed period, before period refinement. All runs use 50 decimal digits and $\mathrm{atol}=\mathrm{rtol}=10^{-24}$. The three incomplete integrations are excluded. Periods are rounded to eight decimal places and state errors to six decimal places.}
-\label{tab:best-raw-candidates}
-\begin{tabular}{rrr}
+% Required in the preamble: \usepackage{booktabs,longtable,xcolor,pdflscape}
+\begingroup
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{longtable}{rrrl}
+\caption{All 30 raw candidates before period refinement. The 27 completed runs are ranked by state error at the original period; the three incomplete runs are listed last in red. For incomplete runs, the reported error is at the stopping time, not at the proposed period. State errors have six decimal places and periods eight.}
+\label{tab:best-raw-candidates}\\
 \toprule
-Candidate & Original $T_0$ & Original state error \\
+Candidate & Original $T_0$ & State error & Integration status \\
 \midrule
-21 & 7.74202198 & 1.252815 \\
-30 & 9.82443019 & 1.411274 \\
-76 & 3.24369370 & 1.489305 \\
-82 & 6.44944105 & 1.511183 \\
-67 & 5.52794461 & 1.643137 \\
-41 & 3.01041549 & 1.684413 \\
-75 & 10.24396824 & 1.855247 \\
-26 & 5.54315186 & 1.904852 \\
-58 & 5.66726145 & 1.973789 \\
-10 & 5.69762640 & 2.268831 \\
+\endfirsthead
+\toprule
+Candidate & Original $T_0$ & State error & Integration status \\
+\midrule
+\endhead
 \bottomrule
-\end{tabular}
-\end{table}
+\endfoot
+21 & 7.74202198 & 1.252815 & Complete \\
+30 & 9.82443019 & 1.411274 & Complete \\
+76 & 3.24369370 & 1.489305 & Complete \\
+82 & 6.44944105 & 1.511183 & Complete \\
+67 & 5.52794461 & 1.643137 & Complete \\
+41 & 3.01041549 & 1.684413 & Complete \\
+75 & 10.24396824 & 1.855247 & Complete \\
+26 & 5.54315186 & 1.904852 & Complete \\
+58 & 5.66726145 & 1.973789 & Complete \\
+10 & 5.69762640 & 2.268831 & Complete \\
+68 & 5.70716104 & 2.292985 & Complete \\
+86 & 5.72847594 & 2.344154 & Complete \\
+4 & 6.26741901 & 2.478970 & Complete \\
+13 & 6.81787890 & 2.964469 & Complete \\
+77 & 9.00363001 & 3.269210 & Complete \\
+65 & 6.05178436 & 3.544091 & Complete \\
+96 & 6.19988321 & 4.020131 & Complete \\
+46 & 5.30526446 & 4.077227 & Complete \\
+14 & 6.30773281 & 5.082938 & Complete \\
+66 & 7.53587075 & 5.138849 & Complete \\
+59 & 6.30228794 & 5.737161 & Complete \\
+3 & 9.73252943 & 5.784043 & Complete \\
+93 & 3.82747749 & 7.188486 & Complete \\
+29 & 7.68411315 & 7.970465 & Complete \\
+85 & 2.92593767 & 9.269756 & Complete \\
+87 & 8.35922034 & 14.044454 & Complete \\
+89 & 10.14073554 & 19.722161 & Complete \\
+\textcolor{red}{40} & \textcolor{red}{3.67636289} & \textcolor{red}{10.232725} & \textcolor{red}{Incomplete} \\
+\textcolor{red}{79} & \textcolor{red}{6.04324141} & \textcolor{red}{18.722805} & \textcolor{red}{Incomplete} \\
+\textcolor{red}{94} & \textcolor{red}{6.43997635} & \textcolor{red}{11.236256} & \textcolor{red}{Incomplete} \\
+\end{longtable}
+\endgroup
