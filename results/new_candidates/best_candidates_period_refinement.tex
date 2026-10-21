@@ -4,7 +4,7 @@
 \small
 \setlength{\tabcolsep}{4pt}
 \begin{longtable}{rrrrrl}
-\caption{Period-search outcomes for all 30 candidates. Completed cases are ordered by the latest completed state error (confirmation error where available, otherwise original-period error). Initial conditions are unchanged. Twenty candidates have an independently confirmed refined return time; seven have a boundary minimum and no confirmed refined period (dashes). Three incomplete original integrations appear last in red; their original-error entries are partial-time errors. Original runs use 50 decimal digits and tolerances $10^{-24}$; confirmation runs use 70 digits and $10^{-26}$. State errors have six decimal places and periods eight.}
+\caption{All 20 candidates with a refined return time and a separate higher-precision confirmation integration, ranked by confirmed state error. Initial conditions are unchanged. The seven boundary-minimum cases and three incomplete original integrations are excluded. Original runs use 50 decimal digits and tolerances $10^{-24}$; confirmation runs use 70 digits and $10^{-26}$. None satisfies the periodicity threshold $0.01$. State errors have six decimal places and periods eight.}
 \label{tab:best-candidates}\\
 \toprule
 Candidate & Original $T_0$ & Original state error & Refined $T_{\mathrm{ref}}$ & Confirmed state error & Search outcome \\
@@ -30,22 +30,12 @@ Candidate & Original $T_0$ & Original state error & Refined $T_{\mathrm{ref}}$ &
 77 & 9.00363001 & 3.269210 & 8.14335991 & 1.771894 & Confirmed; non-periodic \\
 26 & 5.54315186 & 1.904852 & 5.55621565 & 1.893488 & Confirmed; non-periodic \\
 4 & 6.26741901 & 2.478970 & 5.78407066 & 1.925834 & Confirmed; non-periodic \\
-10 & 5.69762640 & 2.268831 & --- & --- & Boundary minimum \\
-68 & 5.70716104 & 2.292985 & --- & --- & Boundary minimum \\
 46 & 5.30526446 & 4.077227 & 4.82319647 & 3.117663 & Confirmed; non-periodic \\
-65 & 6.05178436 & 3.544091 & --- & --- & Boundary minimum \\
 96 & 6.19988321 & 4.020131 & 5.65153487 & 3.813902 & Confirmed; non-periodic \\
 66 & 7.53587075 & 5.138849 & 6.88591020 & 4.161082 & Confirmed; non-periodic \\
-14 & 6.30773281 & 5.082938 & --- & --- & Boundary minimum \\
 3 & 9.73252943 & 5.784043 & 8.93795007 & 5.485417 & Confirmed; non-periodic \\
 93 & 3.82747749 & 7.188486 & 3.52163830 & 5.766338 & Confirmed; non-periodic \\
-29 & 7.68411315 & 7.970465 & --- & --- & Boundary minimum \\
-85 & 2.92593767 & 9.269756 & --- & --- & Boundary minimum \\
 87 & 8.35922034 & 14.044454 & 7.56588749 & 12.902241 & Confirmed; non-periodic \\
-89 & 10.14073554 & 19.722161 & --- & --- & Boundary minimum \\
-\textcolor{red}{40} & \textcolor{red}{3.67636289} & \textcolor{red}{10.232725} & \textcolor{red}{---} & \textcolor{red}{---} & \textcolor{red}{Incomplete; no search} \\
-\textcolor{red}{79} & \textcolor{red}{6.04324141} & \textcolor{red}{18.722805} & \textcolor{red}{---} & \textcolor{red}{---} & \textcolor{red}{Incomplete; no search} \\
-\textcolor{red}{94} & \textcolor{red}{6.43997635} & \textcolor{red}{11.236256} & \textcolor{red}{---} & \textcolor{red}{---} & \textcolor{red}{Incomplete; no search} \\
 \end{longtable}
 \endgroup
 \end{landscape}

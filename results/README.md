@@ -14,7 +14,7 @@ The CSV files omit monitored conserved-quantity diagnostics (energy, momentum, a
 Candidate-table state errors are displayed with six decimal places, without scientific notation.
 
 - [Catalogue verification (LaTeX)](original_initial_conditions/catalogue_verification.tex): all 31 completed catalogue cases, in catalogue-row order.
-- [All candidates and period-search outcomes (LaTeX)](new_candidates/best_candidates_period_refinement.tex): all 30 candidates, including 20 period confirmations, seven boundary minima and three incomplete cases in red. Missing confirmed refinements are shown as dashes.
+- [Period-refined candidates (LaTeX)](new_candidates/best_candidates_period_refinement.tex): only the 20 candidates with a refined return time and a separate higher-precision confirmation integration, ranked by confirmed state error. Boundary-minimum cases and incomplete original integrations are excluded.
 
 Candidate period refinement keeps initial positions fixed and searches 33 times in `[0.9 T0, 1.1 T0]`, followed by a golden-section search around the best interior grid point until the bracket width is at most `1e-12 T0`. The improved return time is checked by a new integration from the initial state, with 70 decimal digits and `atol = rtol = 1e-26` (original runs: 50 digits and `1e-24`). The displayed refined errors are from these confirmation integrations.
 
