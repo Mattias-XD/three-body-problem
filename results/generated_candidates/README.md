@@ -4,6 +4,6 @@
 
 Of these 97 entries, 94 passed the geometry filter used for the subsequent candidate plots and RK4 selection. IC_000002, IC_000054 and IC_000071 were excluded by that filter. The complete file retains them for provenance. Thirty candidates were selected for RK4 testing from the 94 eligible entries.
 
-`T_star` denotes the scale-invariant period, while `T` is the physical period in the adopted simulation units. These are model predictions, not confirmed periodic orbits.
+`T_star` is the CSV notation for $T^{*}=T|E|^{3/2}$, the scale-invariant period. Here, `T` is the period in the adopted simulation units and `E` is the total Newtonian energy. For fixed masses and gravitational constant, this quantity is unchanged under Newtonian rescaling of length and time. The table uses the original `T_star` predictions without rounding; these are not periods of confirmed periodic orbits.
 
 [LaTeX table of the 30 selected candidates](norm_flow_original_candidates.tex), retaining every digit from the original source.
