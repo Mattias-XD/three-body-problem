@@ -19,3 +19,7 @@ Candidate-table state errors are displayed with six decimal places, without scie
 Candidate period refinement keeps initial positions fixed and searches 33 times in `[0.9 T0, 1.1 T0]`, followed by a golden-section search around the best interior grid point until the bracket width is at most `1e-12 T0`. The improved return time is checked by a new integration from the initial state, with 70 decimal digits and `atol = rtol = 1e-26` (original runs: 50 digits and `1e-24`). The displayed refined errors are from these confirmation integrations.
 
 - [All raw candidates (LaTeX)](new_candidates/best_raw_candidates.tex): all 30 candidates before refinement; completed cases ranked by original-period state error and incomplete cases shown last in red.
+
+## Global training outputs
+
+[Complete generated candidate list and the selected-30 LaTeX table](generated_candidates/). The original file contains 97 entries; 94 pass the geometry filter.
