@@ -21,12 +21,12 @@ import mpmath as mp
 SOL80_TXT = Path(__file__).resolve().parent / "Listor" / "sol_80.txt"
 
 HYPERPARAMETERS = {
-    "ic_number": 581,  # <<< SELECT IC HERE: row number in sol_80.txt, starting at 1. >>>
+    "ic_number": 15,  # <<< SELECT IC HERE: row number in sol_80.txt, starting at 1. >>>
     "period_count": 1,  # <<< SELECT THE NUMBER OF PERIODS HERE: end time = period_count * T. >>>
     "dps": 50,
     "h0": "1e-3",  # Initial step size; subsequent steps are chosen adaptively.
-    "rtol": "1e-23",
-    "atol": "1e-23",
+    "rtol": "1e-15",
+    "atol": "1e-15",
     "periodicity_threshold": "0.1",
     "safety": "0.9",
     "min_factor": "0.2",
