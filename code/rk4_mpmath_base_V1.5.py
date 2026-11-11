@@ -278,6 +278,36 @@ def proximity_values_mp(state, initial_state):
     }
 
 
+NEON_COLORS = ("#BD72FF", "#6055FF", "#FF4DA8")
+
+
+def apply_neon_style(fig):
+    """Apply the black background and neon palette without changing orbit data."""
+    fig.set_facecolor("black")
+    for text in fig.texts:
+        text.set_color("white")
+    for ax in fig.axes:
+        ax.set_facecolor("black")
+        ax.tick_params(colors="white")
+        for text in [ax.title, ax.xaxis.label, ax.yaxis.label, *ax.texts]:
+            text.set_color("white")
+        for spine in ax.spines.values():
+            spine.set_color("#666666")
+        if hasattr(ax, "zaxis"):
+            ax.zaxis.label.set_color("white")
+            ax.tick_params(axis="z", colors="white")
+            for axis in (ax.xaxis, ax.yaxis, ax.zaxis):
+                axis.set_pane_color((0, 0, 0, 1))
+                axis.line.set_color("#666666")
+                axis._axinfo["grid"]["color"] = (0.25, 0.25, 0.25, 0.5)
+        legend = ax.get_legend()
+        if legend is not None:
+            legend.get_frame().set_facecolor("#111111")
+            legend.get_frame().set_edgecolor("#666666")
+            for text in legend.get_texts():
+                text.set_color("white")
+
+
 def configure_orbit_view(ax, positions, settings):
     """Use equal x/y length scales and the selected camera tilt for planar motion."""
     import numpy as np
@@ -314,7 +344,7 @@ def add_periodicity_box(fig, result, settings):
     )
     return fig.text(
         0.04, 0.90, text, ha="left", va="top", fontsize=10,
-        bbox=dict(boxstyle="round,pad=0.5", facecolor="white", edgecolor="0.6", alpha=0.95),
+        bbox=dict(boxstyle="round,pad=0.5", facecolor="#111111", edgecolor="#666666", alpha=0.95),
     )
 
 
@@ -333,7 +363,7 @@ def create_orbit_plot(result, settings):
     fig.subplots_adjust(bottom=0.1, top=0.79)
     configure_orbit_view(ax, positions, settings)
     add_periodicity_box(fig, result, settings)
-    for body, color in enumerate(("#0072B2", "#D55E00", "#009E73")):
+    for body, color in enumerate(NEON_COLORS):
         path = positions[:, body, :]
         ax.plot(path[:, 0], path[:, 1], np.zeros(len(path)), color=color,
                 linewidth=settings["plot_linewidth"], label=f"Body {body + 1}")
@@ -345,6 +375,7 @@ def create_orbit_plot(result, settings):
     ax.set_title(f"0 ≤ t ≤ {mp.nstr(result['t'], 8)} · tilt {settings['view_tilt_degrees']:g}°")
     ax.legend(loc="upper right")
     fig.text(0.5, 0.05, "○ Start  ·  × End  ·  motion in the plane z = 0", ha="center")
+    apply_neon_style(fig)
     return fig
 
 
@@ -398,7 +429,7 @@ class OrbitAnimation:
             self.title_prefix += " · incomplete integration"
         self.fig.suptitle(f"{self.title_prefix} · tilt {settings['view_tilt_degrees']:g}°", fontsize=15)
 
-        colors = ("#0072B2", "#D55E00", "#009E73")
+        colors = NEON_COLORS
         self.trails, self.points = [], []
         for body, color in enumerate(colors):
             trail, = self.ax.plot([], [], [], color=color, linewidth=settings["animation_linewidth"])
@@ -430,7 +461,7 @@ class OrbitAnimation:
             self.fig.add_axes([0.15, 0.015, 0.32, 0.055]), ("Orbits", "Triangle"),
             active=1 if self.mode == "triangle" else 0,
         )
-        self.restart_button = Button(self.fig.add_axes([0.59, 0.02, 0.22, 0.04]), "Restart")
+        self.restart_button = Button(self.fig.add_axes([0.59, 0.02, 0.22, 0.04]), "Restart", color="#222222", hovercolor="#444444")
         self.fig.text(0.5, 0.285, "0x = paused  ·  1x = full trajectory in "
                       f"{settings['animation_seconds']:g} s", ha="center", fontsize=10)
         self.fig.text(0.5, 0.083, "Orbits: 0 = bodies only · 1 = full elapsed trail", ha="center", fontsize=9)
@@ -439,6 +470,7 @@ class OrbitAnimation:
         self.trail_slider.on_changed(self.set_trail_fraction)
         self.restart_button.on_clicked(self.restart)
         self.mode_control.on_clicked(self.set_mode)
+        apply_neon_style(self.fig)
         self.set_mode("Triangle" if self.mode == "triangle" else "Orbits")
         self.draw()
         # Keep animation and controls as attributes to prevent garbage collection.
@@ -490,6 +522,7 @@ class OrbitAnimation:
             handles=self.triangle_sides if triangle else self.points,
             loc="upper right",
         )
+        apply_neon_style(self.fig)
         self.fig.canvas.draw_idle()
 
     def advance(self, elapsed):
